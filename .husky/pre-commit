@@ -1,1 +1,3 @@
 pnpx lint-staged
+pnpm run build
+cz --name cz_gitmoji commit
