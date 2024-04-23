@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "test": "git add . && gitmoji -c && lint-staged,"
+    "test": "git add . && gitmoji -c && lint-staged"
   },
   "config": {
     "commitizen": {
