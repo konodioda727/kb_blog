@@ -49,6 +49,9 @@ devDependencies:
   commitlint:
     specifier: ^19.3.0
     version: 19.3.0(@types/node@20.12.7)(typescript@5.4.5)
+  commitlint-config-gitmoji:
+    specifier: ^2.3.1
+    version: 2.3.1
   cz-conventional-changelog:
     specifier: ^3.3.0
     version: 3.3.0(@types/node@20.12.7)(typescript@5.4.5)
@@ -284,6 +287,13 @@ packages:
     engines: {node: '>=v18'}
     dependencies:
       find-up: 7.0.0
+    dev: true
+
+  /@commitlint/types@17.8.1:
+    resolution: {integrity: sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==}
+    engines: {node: '>=v14'}
+    dependencies:
+      chalk: 4.1.2
     dev: true
 
   /@commitlint/types@19.0.3:
@@ -778,6 +788,23 @@ packages:
   /@firebase/webchannel-wrapper@0.10.6:
     resolution: {integrity: sha512-EnfRJvrnzkHwN3BPMCayCFT5lCqInzg3RdlRsDjDvB1EJli6Usj26T6lJ67BU2UcYXBS5xcp1Wj4+zRzj2NaZg==}
     dev: false
+
+  /@gitmoji/commit-types@1.1.5:
+    resolution: {integrity: sha512-8D3FZMRY+gtYpTcHG1SOGmm9CFqxNh6rI9xDoCydxHxnWgqInbdF3nk9gibW5gXA58Hf2cVcJaLEcGOKLRAtmw==}
+    dev: true
+
+  /@gitmoji/gitmoji-regex@1.0.0:
+    resolution: {integrity: sha512-+BFXxcWCxn0UIYuG1v5n9SfaCCS8tw95j1x3QsTJRdGGiihRyVLTHiu1wrHlzH3z4nYXKjCKiZFTdWwMjRI+gQ==}
+    dependencies:
+      emoji-regex: 10.3.0
+      gitmojis: 3.14.0
+    dev: true
+
+  /@gitmoji/parser-opts@1.4.0:
+    resolution: {integrity: sha512-zzmx/vtpdB/ijjUm7u9OzHNCXWKpSbzVEgVzOzhilMgoTBlUDyInZFUtiCTV+Wf4oCP9nxGa/kQGQFfN+XLH1g==}
+    dependencies:
+      '@gitmoji/gitmoji-regex': 1.0.0
+    dev: true
 
   /@grpc/grpc-js@1.9.14:
     resolution: {integrity: sha512-nOpuzZ2G3IuMFN+UPPpKrC6NsLmWsTqSsm66IRfnBt1D4pwTqE27lmbpcPM+l2Ua4gE7PfjRHI6uedAy7hoXUw==}
@@ -1719,6 +1746,23 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
       - typescript
+    dev: true
+
+  /commitlint-config-gitmoji@2.3.1:
+    resolution: {integrity: sha512-T15ssbsyNc6szHlnGWo0/xvIA1mObqM70E9TwKNVTpksxhm+OdFht8hvDdKJAVi4nlZX5tcfTeILOi7SHBGH3w==}
+    dependencies:
+      '@commitlint/types': 17.8.1
+      '@gitmoji/commit-types': 1.1.5
+      '@gitmoji/parser-opts': 1.4.0
+      commitlint-plugin-gitmoji: 2.2.6
+    dev: true
+
+  /commitlint-plugin-gitmoji@2.2.6:
+    resolution: {integrity: sha512-oKHPHeNXby0Ix0ZbHVSK5ZyPx1V4fyBjLOy93cYwXhOEPXe36nkDc/HDPFfQpzx1vz39277TaP9LScbqTbscfQ==}
+    dependencies:
+      '@commitlint/types': 17.8.1
+      '@gitmoji/gitmoji-regex': 1.0.0
+      gitmojis: 3.14.0
     dev: true
 
   /commitlint@19.3.0(@types/node@20.12.7)(typescript@5.4.5):
@@ -2753,6 +2797,10 @@ packages:
       dargs: 8.1.0
       meow: 12.1.1
       split2: 4.2.0
+    dev: true
+
+  /gitmojis@3.14.0:
+    resolution: {integrity: sha512-wPdXxKWfp2dJE6/ch8TDJjYdXvr+4uV67AEcbImj5QC4DmP6Byje1goJL8WgMPFnLY63eadK6oxtnSjdRFzS6g==}
     dev: true
 
   /glob-parent@5.1.2:
