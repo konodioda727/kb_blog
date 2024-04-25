@@ -15,7 +15,7 @@ import {DialogInputProps, DialogTemplateProps} from "@/common/components/dialog/
 import {genKey} from "@/common/utils/genKey";
 import {useDynamic} from "@/common/hooks/useDynamic";
 
-let data:{[key: string]: string} = {}
+const data:{[key: string]: string} = {}
 const handleInput = (name: string, context: string) => {
     data[name] = context
 }
