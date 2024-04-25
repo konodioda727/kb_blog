@@ -1,10 +1,10 @@
-"use client"
+'use client';
 
-import RegisterModule from "@/modules/auth/register";
+import RegisterModule from '@/modules/auth/register';
 
 export default function Home() {
   return (
-    <main className='w-full h-full'>
+    <main className="h-full w-full">
       <RegisterModule></RegisterModule>
     </main>
   );
