@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint --fix --max-warnings=0  && next build && pnpx prettier --write .",
     "prepare": "husky",
-    "commit": "git add . && gitmoji -c && pnpm run lint"
+    "commit": "git add . && gitmoji -c && pnpm run lint && git push"
   },
   "config": {
     "commitizen": {
