@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix && prettier --write && next build ",
+    "lint": "eslint --fix --max-warnings=0 && prettier --write && next build ",
     "prepare": "husky",
     "test": "git add . && gitmoji -c && pnpm run lint"
   },
