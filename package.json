@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --fix && prettier --write && next build ",
     "prepare": "husky",
-    "test": "git add . && gitmoji -c && lint-staged"
+    "test": "git add . && gitmoji -c && pnpm run lint"
   },
   "config": {
     "commitizen": {
